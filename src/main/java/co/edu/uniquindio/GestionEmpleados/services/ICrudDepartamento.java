@@ -6,9 +6,13 @@ import java.util.ArrayList;
 
 public interface ICrudDepartamento {
 
-    Departamento crearDepartamento(Departamento departamento);
-    void eliminarDepartamento(Departamento departamento);
-    Departamento modificarDepartamento(Departamento departamento);
-    Departamento buscarDepartamento(Departamento departamento);
-    ArrayList<Departamento> listarDepartamentos();
+    boolean crearDepartamento(String nombre, String codigo);
+
+    boolean eliminarDepartamento(String codigo);
+
+    boolean modificarDepartamento(String codigo, String nombre);
+
+    Departamento getDepartamento(String codigo);
+
+    ArrayList<Departamento> getDepartamentos();
 }
